@@ -13,9 +13,11 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
 }
 
 h1,
@@ -35,4 +37,62 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 35%;
+  grid-template-areas: "result content__details";
+  column-gap: 30px;
+  align-items: center;
+}
+
+.result {
+  display: grid;
+  gap: 16px;
+  grid-area: result;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  height: 298px;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+.content__details {
+  grid-area: content__details;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;  
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {  
+  flex-grow: 1;
 }
